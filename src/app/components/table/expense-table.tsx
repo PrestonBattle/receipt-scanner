@@ -15,16 +15,16 @@ export default function ExpenseTable({ expenses }: Props) {
   }
 
   return (
-    <div className="w-full overflow-x-auto rounded-xl border border-gray-200">
+    <div className="w-full overflow-x-auto rounded-xl border border-2 border-[var(--color-bg-elevated)]">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-gray-200 bg-gray-50 text-left">
-            <th className="px-4 py-3 font-medium text-gray-500">Date</th>
-            <th className="px-4 py-3 font-medium text-gray-500">Merchant</th>
-            <th className="px-4 py-3 font-medium text-gray-500">Category</th>
-            <th className="px-4 py-3 font-medium text-gray-500">Description</th>
-            <th className="px-4 py-3 font-medium text-gray-500">Type</th>
-            <th className="px-4 py-3 font-medium text-gray-500 text-right">Amount</th>
+          <tr className="border-b border-border-[var(--color-bg-elevated)] bg-[var(--color-bg-surface)] text-left">
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]">Date</th>
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]">Merchant</th>
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]">Category</th>
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]">Description</th>
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]">Type</th>
+            <th className="px-4 py-3 font-medium text-[var(--color-text-primary)]t">Amount</th>
           </tr>
         </thead>
         <tbody>
