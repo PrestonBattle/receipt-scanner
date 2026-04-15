@@ -3,6 +3,8 @@
 import Image from "next/image";
 import ExpenseTable from "./components/table/expense-table";
 import { ExpenseRow } from "@/global/types";
+import { AddButton } from "./components/buttons/add-button";
+import { useState } from "react";
 
 const sampleExpenses: ExpenseRow[] = [
   {
@@ -46,10 +48,15 @@ const sampleExpenses: ExpenseRow[] = [
   },
 ];
 
+const [isOpen, setOpen] = useState<boolean>(false);
+
 export default function Home() {
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-1">Transactions</h1>
+      <div className="flex items-center justify-between mb-1">
+        <h1 className="text-2xl font-semibold">Transaction Tracker</h1>
+        <AddButton label="Add Transaction" onClick={() => setOpen(true)}/>
+      </div>
       <p className="text-sm text-gray-500 mb-8">Your recent income and expenses</p>
       <ExpenseTable expenses={sampleExpenses} />
     </main>
