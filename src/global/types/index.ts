@@ -7,7 +7,7 @@ export interface ExpenseRow{
   category: string;
   merchant: string | null;
   paymentMethod: string | null;
-  recipetUrl: string | null;
+  receiptUrl: string | null;
   notes: string | null;
   createdAt: string; 
 }
